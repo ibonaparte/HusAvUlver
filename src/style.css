@@ -1,0 +1,123 @@
+* {
+  font-family: "Noto Sans";
+  margin: 0;
+}
+
+.scoreboard-container {
+  background-color: #b8f2ff;
+  position: relative;
+}
+
+.scoreboard-wrapper {
+  display: flex;
+  overflow: auto;
+}
+
+.scoreboard-wrapper::-webkit-scrollbar {
+  height: 7px;
+  width: 4px;
+  background: #dbdbdb;
+}
+
+.scoreboard-wrapper::-webkit-scrollbar-thumb:horizontal {
+  background: #000;
+  border-radius: 10px;
+}
+.scoreboard-date {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 28px;
+  line-height: 28px;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid black;
+}
+
+.scoreboard-controls-container {
+  position: relative;
+}
+
+.scoreboard-prev {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid black;
+  position: absolute;
+  left: 0;
+  min-height: 132px;
+  background-color: #b8f2ff;
+  display: none;
+}
+
+.scoreboard-next {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-left: 1px solid black;
+  position: absolute;
+  right: 0;
+  background-color: #b8f2ff;
+  min-height: 132px;
+  display: none;
+}
+
+.scoreboard-score-container {
+  min-width: 275px;
+}
+
+.scoreboard-away-score-container {
+  display: flex;
+  padding: 10px 0px 6px 17px;
+}
+
+.scoreboard-home-score-container {
+  display: flex;
+  padding: 6px 0px 10px 17px;
+}
+
+.away-team-logo,
+.home-team-logo {
+  border-radius: 50px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.away-team-logo,
+.home-team-logo {
+  max-width: 50px;
+}
+
+.away-team-name,
+.home-team-name {
+  display: flex;
+  align-items: center;
+  width: 130px;
+  margin-left: 8px;
+}
+
+.away-team-score,
+.home-team-score {
+  display: flex;
+  align-items: center;
+  background-color: #e4faff;
+  width: 30px;
+  text-align: center;
+  border-radius: 5px;
+  justify-content: center;
+
+  font-size: 24px;
+}
+
+.left-arrow {
+  max-width: 40px;
+  transform: rotate(180deg);
+}
+
+.right-arrow {
+  max-width: 40px;
+}
