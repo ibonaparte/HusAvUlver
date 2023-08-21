@@ -1,21 +1,5 @@
-/*
-TO DO
-1. getRecentGames
-    - get most recent games from JSON file (NHL API CALL)
-    - parse JSON to...
-        a) Was HUS AL AVER home or away?
-        b) setScore()
-        c) create array of scores to be used as props (cache this somehow?)
-*/
-
-//Props should be an array of...
-//[ [homeTeamScore] , [awayTeamScore] ]
-// console.log(score[0].name + " VS " + score[1].name);
-//[homeTeamScore] = [homeLogo, homeName, homeScore]
-
 const Scoreboard = (props) => {
   const scores = props.scores;
-  console.log(scores);
 
   const scoreboards = scores.map((score) => (
     <div className="scoreboard-score-container">

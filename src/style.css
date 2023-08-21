@@ -1,11 +1,52 @@
 * {
   font-family: "Noto Sans";
   margin: 0;
+  color: unset;
+  text-decoration: unset;
+  padding-inline-start: 0;
+}
+
+.navbar {
+  background-color: #5a00a0;
+  color: white;
+  font-size: 18px;
+  padding: 7px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#hamburger-menu-icon {
+  display: none;
+}
+
+.logo-img {
+  width: 60px;
+}
+
+.nav-links {
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-item {
+  color: white;
 }
 
 .scoreboard-container {
   background-color: #b8f2ff;
-  position: relative;
+  position: scores;
 }
 
 .scoreboard-wrapper {
@@ -35,7 +76,7 @@
 }
 
 .scoreboard-controls-container {
-  position: relative;
+  position: scores;
 }
 
 .scoreboard-prev {
@@ -68,6 +109,10 @@
 
 .scoreboard-score-container {
   min-width: 275px;
+  background-color: #d0f6ff;
+  margin: 7px 10px;
+  border-radius: 30px;
+  border: 1px solid #64b5c9;
 }
 
 .scoreboard-away-score-container {
@@ -120,4 +165,93 @@
 
 .right-arrow {
   max-width: 40px;
+}
+
+/*Mobile/Tablet Styles*/
+@media screen and (max-width: 992px) {
+  .closed {
+    display: none !important;
+  }
+
+  .open {
+    transition: all 0.5s ease;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.62);
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.5s ease;
+    z-index: 99;
+  }
+
+  #hamburger-menu-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9999;
+  }
+
+  .hamburger-line {
+    width: 37px;
+    border-radius: 3px;
+    height: 4px;
+    background-color: white;
+    margin: 8px 0;
+
+    transition: margin 0.2s, transform 0.2s;
+
+    /* same as above but with prefixes added */
+    -webkit-transition: margin 0.2s, -webkit-transform 0.2s;
+    transition: margin 0.2s, -webkit-transform 0.2s;
+    -o-transition: margin 0.2s, transform 0.2s;
+    transition: margin 0.2s, transform 0.2s;
+    transition: margin 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-logo-container {
+    z-index: 20;
+    background-color: #5a00a0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    line-height: 69px;
+    width: 100%;
+    text-align: center;
+    background-color: #5a00a0;
+    position: absolute;
+    transition: all 0.5s ease;
+  }
+
+  .nav-links.closed {
+    top: -215px;
+    display: block !important;
+    z-index: 1;
+  }
+
+  .nav-links.open {
+    top: 65px;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-top: 1px solid white;
+  }
+
+  .nav-item a {
+    width: 100%;
+    display: inline-block;
+  }
 }

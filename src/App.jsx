@@ -10,7 +10,7 @@ const App = () => {
   for (var i = 0; i < matchData.length; i++) {
     var currentGame = [];
 
-    //loop through each club in the currentGame
+    //loop through each team in the currentGame
     for (var key in matchData[i].clubs) {
       var team = new Object();
 
