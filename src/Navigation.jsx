@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
-  const navElements = ["About", "Roster", "Stats", "Highlights"];
+  const navElements = ["About", "Roster", "Scores", "Highlights"];
   const [open, setOpen] = useState(false);
 
   return (
@@ -14,21 +15,21 @@ const Navigation = () => {
         </a>
 
         <div className="nav-logo-container">
-          <a className="nav-logo" href="/">
+          <Link to="/" className="nav-logo">
             <img
               className="logo-img"
               src="https://media.contentapi.ea.com/content/dam/eacom/nhl/pro-clubs/custom-crests/22.png"
               alt="Coyotes Logo used by Hus Av Ulver"
             />
-          </a>
+          </Link>
           <span className="nav-title">Hus Av Ulver</span>
         </div>
         <ul className={open ? "nav-links open" : "nav-links closed"}>
           {navElements.map((navElement) => (
-            <li className="nav-item">
-              <a href="#" onClick={() => console.log("Nav Click")}>
+            <li key={navElement} className="nav-item">
+              <Link to={`/${navElement}`} onClick={() => setOpen(!open)}>
                 {navElement}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,0 +1,54 @@
+{
+  "clubMembers": [
+    {
+      "gt": "MistrBruin",
+      "firstName": "Mister",
+      "lastName": "Bruin",
+      "number": "46",
+      "image": "https://placehold.co/110x110"
+    },
+    {
+      "gt": "FlyinPhilly17",
+      "firstName": "Terrance",
+      "lastName": "Simmonds",
+      "number": "17",
+      "image": "https://placehold.co/110x110"
+    },
+    {
+      "gt": "RyanSuicide88",
+      "firstName": "Ryan",
+      "lastName": "Suicide",
+      "number": "88",
+      "image": "https://placehold.co/110x110"
+    },
+
+    {
+      "gt": "Trocity V",
+      "firstName": "Trocity",
+      "lastName": "V",
+      "number": "55",
+      "image": "https://placehold.co/110x110"
+    },
+    {
+      "gt": "SwerveWalker",
+      "firstName": "Swerve",
+      "lastName": "Walker",
+      "number": "18",
+      "image": "https://placehold.co/110x110"
+    },
+    {
+      "gt": "JTDtheBeast",
+      "firstName": "Zesty",
+      "lastName": "Comepowder",
+      "number": "69",
+      "image": "https://placehold.co/110x110"
+    },
+    {
+      "gt": "dekez4lyfe12",
+      "firstName": "Dekez",
+      "lastName": "4Lyfe",
+      "number": "12",
+      "image": "https://placehold.co/110x110"
+    }
+  ]
+}

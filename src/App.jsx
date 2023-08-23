@@ -1,9 +1,17 @@
 import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import matchData from "./recentgames.json";
+import memberData from "./memberstats.json";
+import rosterInfo from "./rosterInfo.json";
+
 import Scoreboard from "./Scoreboard";
 import Navigation from "./Navigation";
-import matchData from "./recentgames.json";
+import HomePageBanner from "./HomepageBanner";
+import Roster from "./Roster";
 
 const App = () => {
+  //TODO: REFACTOR THIS
   var recentGames = [];
 
   //loop through each currentGame
@@ -24,12 +32,36 @@ const App = () => {
 
     recentGames.push(currentGame);
   }
+  //END REFACTOR
 
   return (
     <>
-      <Navigation />
-      <Scoreboard scores={recentGames} />
-      <h1> Hello World! </h1>
+      <BrowserRouter>
+        <Navigation />
+        <Scoreboard scores={recentGames} />
+
+        <Routes>
+          <Route
+            path="/roster"
+            element={
+              <Roster
+                members={memberData.members}
+                playerInfo={rosterInfo.clubMembers}
+              />
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <HomePageBanner
+                image="./img/center-ice-logo.png"
+                title="Hus Av Ulver HC"
+                subtitle="Est. 2021"
+              />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

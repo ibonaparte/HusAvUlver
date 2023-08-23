@@ -2,6 +2,7 @@ const Scoreboard = (props) => {
   const scores = props.scores;
 
   const scoreboards = scores.map((score) => (
+    //Add key to div, matchId
     <div className="scoreboard-score-container">
       <div className="scoreboard-away-score-container">
         <img
