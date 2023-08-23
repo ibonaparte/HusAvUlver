@@ -1,14 +1,14 @@
 {
-  "homepage": "https://myusername.github.io/HusAvUlver/",
+  "homepage": "https://ibonaparte.github.io/HusAvUlver/",
   "name": "hus-av-ulver",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",
-    "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write  \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
